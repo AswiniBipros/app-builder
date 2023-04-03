@@ -9,7 +9,7 @@ import { MenuModel } from 'src/app/application-model/menu-model';
 })
 export class AddMenuComponent implements OnInit {
   menuItems:MenuModel[] = [];
-
+  editMode = true;
   @Output('onCancel') onCancel = new EventEmitter();
   @Output('onSave') onSave = new EventEmitter();
   constructor() { }
@@ -17,7 +17,7 @@ export class AddMenuComponent implements OnInit {
   ngOnInit(): void {
     this.menuItems.push(new MenuModel('', 'Update','pi pi-pencil',[new MenuModel()]));
   }
-  addNew(item : MenuItem) {
+  addNew(item : MenuModel) {
     if(!item.items) {
       item.items = [];
     }
@@ -25,10 +25,14 @@ export class AddMenuComponent implements OnInit {
   }
 
   addNewParent() {
-    this.menuItems.push(new MenuModel('', '','',[]));
+    if(!this.editMode) {
+      this.editMode = !this.editMode;
+    } else {
+      this.menuItems.push(new MenuModel('', '','',[]));
+    }
   }
 
-  deleteNode(item:MenuItem,index:number) {
+  deleteNode(item:MenuModel,index:number) {
     if(item) {
       item.items?.splice(index, 1);
     } else {
