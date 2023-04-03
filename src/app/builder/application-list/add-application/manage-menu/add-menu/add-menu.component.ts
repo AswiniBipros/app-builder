@@ -20,4 +20,14 @@ export class AddMenuComponent implements OnInit {
     }
     item.items.push(new MenuModel());
   }
+  addNewParent() {
+    this.menuItems.push(new MenuModel('', '','',[]));
+  }
+  deleteNode(item:MenuItem,index:number) {
+    if(item) {
+      item.items?.splice(index, 1);
+    } else {
+      this.menuItems.splice(index, 1);
+    }
+  }
 }
