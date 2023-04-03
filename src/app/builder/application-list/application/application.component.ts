@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { ApplicationModel } from 'src/app/application-model/application-model';
 
@@ -8,9 +9,14 @@ import { ApplicationModel } from 'src/app/application-model/application-model';
 })
 export class ApplicationComponent implements OnInit {
   @Input('application') application: ApplicationModel = new ApplicationModel('001','App Manage','pi pi-plus','description');
+ 
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  getRandomColor(){
   }
 
 }

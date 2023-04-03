@@ -16,6 +16,7 @@ import { MenuHeaderComponent } from './builder/application-list/manage-menu/menu
 import { AddMenuComponent } from './builder/application-list/manage-menu/add-menu/add-menu.component';
 import { ApplicationComponent } from './builder/application-list/application/application.component';
 import { AppSharedModule } from './share-module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AppSharedModule } from './share-module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppSharedModule
+    AppSharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
