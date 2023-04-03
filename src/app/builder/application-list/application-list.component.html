@@ -8,7 +8,12 @@
     ></p-button>
   </div>
     <div class="col-4 bg-red" *ngFor="let model of appModels">
-      <app-application [application]="model" [bgColor]="getRandomColor()" ></app-application>
+      <app-application
+        [application]="model"
+        [bgColor]="getRandomColor()"
+        (onApplicationEdit)="onApplicationEdit($event)"
+        (onApplicationDelete)="confirmDelete($event)"
+      ></app-application>
     </div>
 </div>
 <app-add-application #addNewAppModalComponent></app-add-application>

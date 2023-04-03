@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApplicationModel } from 'src/app/application-model/application-model';
 import { AddApplicationComponent } from './add-application/add-application.component';
 import colors from 'src/app/application-model/color-constant-model';
+import { ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-application-list',
@@ -16,6 +17,7 @@ export class ApplicationListComponent implements OnInit {
   @ViewChild('addNewAppModalComponent') addNewAppModalComponent !: AddApplicationComponent;
   constructor(
     private http: HttpClient,
+    private confirmationService: ConfirmationService
   ) { }
 
   ngOnInit(): void {
@@ -36,4 +38,23 @@ export class ApplicationListComponent implements OnInit {
     if (this.colorIndex == colors.length) this.colorIndex = 0;
     return colors[this.colorIndex];
   }
+  onApplicationEdit(application: ApplicationModel) {
+    this.addNewAppModalComponent.application = application;
+    this.addNewAppModalComponent.isAddNewAppModalOpen = true;
+  }
+  confirmDelete(application:ApplicationModel) {
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to delete?',
+      header: 'Confirmation',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+          this.onApplicationDelete(application);
+      },
+      reject: ()=> {}
+  });
+  }
+  onApplicationDelete(application: ApplicationModel) {
+    //logic yet to be implemented
+  }
+
 }

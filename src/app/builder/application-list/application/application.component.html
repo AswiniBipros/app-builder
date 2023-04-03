@@ -1,7 +1,7 @@
 <p-card [style]="getColor()">
   <div class="flex justify-content-end flex-wrap">
-    <i [class]="'pi pi-pencil'"></i>
-    <i [class]="'pi pi-trash pl-2'"></i>
+    <i [class]="'pi pi-pencil'" (click)="editApplication(application)"></i>
+    <i [class]="'pi pi-trash pl-2'" (click)="deleteApplication(application)"></i>
   </div>
   <div class="flex justify-content-center header-text">
     <i [class]="application.icon"></i>

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ApplicationModel } from 'src/app/application-model/application-model';
 
 @Component({
@@ -15,11 +15,18 @@ export class ApplicationComponent implements OnInit {
     'description'
   );
   @Input('bgColor') background: string = '';
-
+  @Output('onApplicationEdit') onApplicationEdit = new EventEmitter();
+  @Output('onApplicationDelete') onApplicationDelete = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
   getColor() {
     return {background : this.background};
+  }
+  editApplication(application: ApplicationModel) {
+    this.onApplicationEdit.emit(application);
+  }
+  deleteApplication(application: ApplicationModel) {
+    this.onApplicationDelete.emit(application);
   }
 }
