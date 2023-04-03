@@ -4,3 +4,17 @@
   color: red;
   font-style: initial;
 }
+.header-text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pi {
+  cursor: pointer;
+}
+
+.pi:hover {
+  color: red;
+  font-weight: 700;
+}
