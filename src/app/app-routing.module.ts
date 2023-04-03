@@ -6,16 +6,16 @@ import { WorkspaceComponent } from './builder/workspace/workspace.component';
 
 const routes: Routes = [
   {
-    path:'app-list',
-    component:ApplicationListComponent
+    path: 'app-list',
+    component: ApplicationListComponent
   },
   {
-    path:'designer',
-    component:DesignerComponent
+    path: 'designer',
+    component: DesignerComponent
   },
   {
-    path:'workspace',
-    component:WorkspaceComponent
+    path: 'workspace',
+    component: WorkspaceComponent
   }
 ];
 
