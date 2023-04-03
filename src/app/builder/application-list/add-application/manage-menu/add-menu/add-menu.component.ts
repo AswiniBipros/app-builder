@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 import { MenuModel } from 'src/app/application-model/menu-model';
 
 @Component({
@@ -11,7 +12,12 @@ export class AddMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.menuItems.push(new MenuModel());
+    this.menuItems.push(new MenuModel('', 'Update','pi pi-pencil',[new MenuModel()]));
   }
-
+  addNew(item : MenuItem) {
+    if(!item.items) {
+      item.items = [];
+    }
+    item.items.push(new MenuModel());
+  }
 }

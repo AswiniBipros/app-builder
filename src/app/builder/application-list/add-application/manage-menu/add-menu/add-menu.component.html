@@ -1,31 +1,42 @@
-<div class="grid mt-2">
-  <div class="md:col-5">
-    <div class="field">
-      <label for="Menu Name" class="required">Menu Name</label>
-      <input
-        pInputText
-        id="Menu Name"
-        placeholder="Enter Menu Name"
-        class="w-full"
-      />
+<ul style="list-style-type: none;">
+  <ng-container *ngTemplateOutlet="Recursion; context:{ list: menuItems}"></ng-container>
+</ul>
+
+<ng-template #Recursion let-list="list">
+  <li *ngFor="let item of list" style="list-style-type: none;">
+    <div class="grid">
+      <div class="md:col-5">
+        <div class="field">
+          <label for="Menu Name" class="required">Menu Name</label>
+          <input
+            pInputText
+            id="Menu Name"
+            placeholder="Enter Menu Name"
+            class="w-full"
+            [(ngModel)]="item.label"
+          />
+        </div>
+      </div>
+      <div class="md:col-5">
+        <div class="field">
+          <label for="Menu Name" class="required">Icon</label>
+          <input
+            pInputText
+            id="Menu Name"
+            placeholder="Example pi pi-pencil"
+            class="w-full"
+            [(ngModel)]="item.icon"
+          />
+        </div>
+      </div>
+      <div class="md:col-2">
+        <p-button icon="pi pi-plus" styleClass="p-button-sm" (onClick)="addNew(item)"></p-button>
+      </div>
     </div>
-  </div>
-  <div class="md:col-5">
-    <div class="field">
-      <label for="Menu Name" class="required">Icon</label>
-      <input
-        pInputText
-        id="Menu Name"
-        placeholder="Example pi pi-pencil"
-        class="w-full"
-      />
-    </div>
-  </div>
-  <div class="md:col-2">
-    <p-button icon="pi pi-plus"></p-button>
-  </div>
-  <div class="md:col-12 text-right">
-    <p-button label="Cancel" styleClass="p-button-outlined p-button-secondary"></p-button>
-    <p-button label="Save" styleClass="p-button-raised p-button-danger ml-2"></p-button>
-  </div>
-</div>
+    <ul *ngIf="item.items && item.items.length > 0">
+      <ng-container
+        *ngTemplateOutlet="Recursion; context:{ list: item.items }"
+      ></ng-container>
+    </ul>
+  </li>
+</ng-template>
