@@ -1,1 +1,7 @@
-<p-menu #menu [model]="items"></p-menu>
+<span>
+    <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+</span>
+<button (click)="fileInput.click()">Select File</button>
+<div class="card flex justify-content-center">
+    <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+</div>
