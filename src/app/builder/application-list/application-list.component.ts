@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApplicationModel } from 'src/app/application-model/application-model';
+import { AddApplicationComponent } from './add-application/add-application.component';
 // import * as appData from '../../../assets/json/application-list.json';
 
 @Component({
@@ -11,7 +12,7 @@ import { ApplicationModel } from 'src/app/application-model/application-model';
 export class ApplicationListComponent implements OnInit {
 
   appModels:ApplicationModel[] = [];
-
+  @ViewChild('addNewAppModalComponent') addNewAppModalComponent !:AddApplicationComponent;
   constructor(
     private http: HttpClient,
   ) { }
@@ -25,5 +26,8 @@ export class ApplicationListComponent implements OnInit {
       .subscribe((res) => {
         this.appModels = res as ApplicationModel[];
       })
+  }
+  openAddNewAppModal() {
+    this.addNewAppModalComponent.isAddNewAppModalOpen = true;
   }
 }
