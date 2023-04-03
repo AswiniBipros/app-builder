@@ -25,7 +25,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { DividerModule } from 'primeng/divider';
 import {DragDropModule} from 'primeng/dragdrop';
 import {PanelModule} from 'primeng/panel';
-const dModules = [ImageModule, MenubarModule, ScrollPanelModule, InputTextModule, OverlayPanelModule, CommonModule, FormsModule,OrderListModule, ReactiveFormsModule, CardModule, ButtonModule, ListboxModule, TableModule, SelectButtonModule, DialogModule, DynamicDialogModule, TooltipModule, PickListModule, TabViewModule, TieredMenuModule, VirtualScrollerModule, OrganizationChartModule, TreeModule, BreadcrumbModule, DividerModule, DragDropModule, PanelModule , ]
+import { ChipModule } from 'primeng/chip';
+const dModules = [ImageModule, MenubarModule, ScrollPanelModule, InputTextModule, OverlayPanelModule, CommonModule, FormsModule,OrderListModule, ReactiveFormsModule, CardModule, ButtonModule, ListboxModule, TableModule, SelectButtonModule, DialogModule, DynamicDialogModule, TooltipModule, PickListModule, TabViewModule, TieredMenuModule, VirtualScrollerModule, OrganizationChartModule, TreeModule, BreadcrumbModule, DividerModule, DragDropModule, PanelModule , ChipModule]
 @NgModule({
   declarations: [],
   imports: dModules,
