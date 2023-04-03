@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manage-menu.component.css']
 })
 export class ManageMenuComponent implements OnInit {
-
+  isManageMenuModalOpen:boolean = false;
   constructor() { }
 
   ngOnInit(): void {

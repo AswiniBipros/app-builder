@@ -1,1 +1,24 @@
-<p>manage-menu works!</p>
+<p-dialog header="Manage Menu" [modal]="true" [(visible)]="isManageMenuModalOpen" styleClass="modal-md" [closable]="true">
+  <ng-template pTemplate="content">
+    <p-tabView>
+      <p-tabPanel header="Menu Items">
+        <div class="grid">
+          <div class="md:col-4">
+            <app-menu-list></app-menu-list>
+          </div>
+          <div class="md:col-8">
+            <app-add-menu></app-add-menu>
+          </div>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="Resource">
+          <p>
+              Resource
+          </p>
+      </p-tabPanel>
+  </p-tabView>
+  </ng-template>
+  <ng-template pTemplate="footer">
+
+  </ng-template>
+</p-dialog>

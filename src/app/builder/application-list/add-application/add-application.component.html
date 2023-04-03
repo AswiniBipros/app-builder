@@ -41,6 +41,7 @@
      <ng-template pTemplate="footer">
         <p-button label="Cancel" styleClass="p-button-outlined p-button-secondary" (onClick)="isAddNewAppModalOpen = false"></p-button>
         <p-button label="Save" styleClass="p-button-raised p-button-danger"></p-button>
-        <p-button label="Next" styleClass="p-button-secondary"></p-button>
+        <p-button label="Next" styleClass="p-button-secondary" (onClick)="openManageMenuModal()"></p-button>
      </ng-template>
 </p-dialog>
+<app-manage-menu #manageMenuModalComponent></app-manage-menu>

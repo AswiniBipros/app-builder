@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ManageMenuComponent } from './manage-menu/manage-menu.component';
 
 @Component({
   selector: 'app-add-application',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddApplicationComponent implements OnInit {
   isAddNewAppModalOpen = false;
+  @ViewChild('manageMenuModalComponent') manageMenuModalComponent !:ManageMenuComponent;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  openManageMenuModal() {
+    this.manageMenuModalComponent.isManageMenuModalOpen = true;
+  }
 }
