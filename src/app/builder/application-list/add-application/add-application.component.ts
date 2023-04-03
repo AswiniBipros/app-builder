@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ManageMenuComponent } from './manage-menu/manage-menu.component';
+import { ApplicationModel } from 'src/app/application-model/application-model';
 
 @Component({
   selector: 'app-add-application',
@@ -10,6 +11,7 @@ export class AddApplicationComponent implements OnInit {
   isAddNewAppModalOpen = false;
   @ViewChild('manageMenuModalComponent') manageMenuModalComponent !:ManageMenuComponent;
   constructor() { }
+  application:ApplicationModel = new ApplicationModel();
 
   ngOnInit(): void {
   }
