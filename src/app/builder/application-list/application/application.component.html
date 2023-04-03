@@ -1,8 +1,12 @@
 <p-card >
+  <div class="flex justify-content-end flex-wrap" >
+    <i [class]="'pi pi-pencil'"></i>
+    <i [class]="'pi pi-trash pl-2'"></i>
+  </div>
   <div class="flex justify-content-center flex-wrap" >
     {{application.name}}
   </div>
-  <div class="flex justify-content-center mt-2">
+  <div class="flex justify-content-center mt-4">
     <i [class]="application.icon"></i>
   </div>
 </p-card>
