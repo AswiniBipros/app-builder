@@ -1,4 +1,12 @@
 <div class="grid mt-3">
+  <div class="md:col-12 text-right">
+    <p-button
+      label="Add New App"
+      icon="pi pi-plus"
+      styleClass="p-button-danger"
+      (onClick)="openAddNewAppModal()"
+    ></p-button>
+  </div>
     <div class="col-4 bg-red" *ngFor="let model of appModels">
        <app-application [application]="model" ></app-application>
     </div>
