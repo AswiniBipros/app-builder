@@ -6,3 +6,5 @@ const colors = [
   '#FA9E62', /* pitch */
   '#1C9CCF' /* cyan blue */
 ]
+
+export default colors;
