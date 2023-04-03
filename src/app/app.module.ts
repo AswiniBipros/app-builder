@@ -15,6 +15,7 @@ import { MenuListComponent } from './builder/application-list/manage-menu/menu-l
 import { MenuHeaderComponent } from './builder/application-list/manage-menu/menu-header/menu-header.component';
 import { AddMenuComponent } from './builder/application-list/manage-menu/add-menu/add-menu.component';
 import { ApplicationComponent } from './builder/application-list/application/application.component';
+import { AppSharedModule } from './share-module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ApplicationComponent } from './builder/application-list/application/app
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppSharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

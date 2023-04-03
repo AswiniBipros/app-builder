@@ -1,0 +1,39 @@
+[
+    {
+        "id": "",
+        "name": "Asset Management",
+        "icon": "pi pi-users",
+        "description": ","
+    },
+    {
+        "id": "",
+        "name": "Human Resource Management",
+        "icon": "pi pi-user",
+        "description": ","
+    },
+    {
+        "id": "",
+        "name": "Incident Management",
+        "icon": "pi pi-cog",
+        "description": ","
+    },
+    {
+        "id": "",
+        "name": "BIP Reports & Dashboard",
+        "icon": "pi pi-file",
+        "description": ","
+    },
+    {
+        "id": "",
+        "name": "Test App",
+        "icon": "pi pi-plus",
+        "description": ","
+    },
+    {
+        "id": "",
+        "name": "Subrat Test App",
+        "icon": "pi pi-globe",
+        "description": ","
+    }
+
+]
