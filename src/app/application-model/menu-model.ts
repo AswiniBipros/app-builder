@@ -1,13 +1,13 @@
 export class MenuModel {
   id: string;
-  name: string;
+  label: string;
   icon: string;
-  children: MenuModel[] = [];
+  items: MenuModel[] = [];
 
-  constructor(id: string, name: string, icon: string, children: MenuModel[]) {
+  constructor(id: string, label: string, icon: string, items: MenuModel[]) {
     this.id = id;
-    this.name = name;
+    this.label = label;
     this.icon = icon;
-    this.children = children;
+    this.items = items;
   }
 }
