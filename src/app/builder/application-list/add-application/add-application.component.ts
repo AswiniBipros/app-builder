@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-application.component.css']
 })
 export class AddApplicationComponent implements OnInit {
-
+  isAddNewAppModalOpen = false;
   constructor() { }
 
   ngOnInit(): void {
