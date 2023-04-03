@@ -9,7 +9,8 @@ import { ApplicationModel } from 'src/app/application-model/application-model';
 })
 export class ApplicationComponent implements OnInit {
   @Input('application') application: ApplicationModel = new ApplicationModel('001','App Manage','pi pi-plus','description');
- 
+  @Input('bgColor') bgColor:string = "";
+  
   constructor() { }
 
   ngOnInit(): void {
