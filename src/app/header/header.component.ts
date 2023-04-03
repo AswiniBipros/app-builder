@@ -13,19 +13,16 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {
-          label: 'File'
+          label: 'Workspace',
+          routerLink:'workspace'
       },
       {
-          label: 'Edit'
+          label: 'App Builder',
+          routerLink:'app-list'
       },
       {
-          label: 'Users'
-      },
-      {
-          label: 'Events'
-      },
-      {
-          label: 'Quit'
+          label: 'Designer',
+          routerLink:'designer'
       }
   ];
   }

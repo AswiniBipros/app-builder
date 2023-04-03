@@ -1,38 +1,45 @@
-<p-dialog header="Long Content" [(visible)]="isAddNewAppModalOpen" [style]="{ width: '50vw', height: '300px' }" [closable]="true">
-     <ng-template pTemplate="header">
-
-     </ng-template>
-     <ng-template pTemplate="header">
+<p-dialog header="Add New App" [(visible)]="isAddNewAppModalOpen" [style]="{ width: '50vw', height: '80vh' }" [closable]="true">
+     <ng-template pTemplate="content">
       <div class="grid">
         <div class="md:col-12">
-          <label for="firstname">Firstname</label>
+          <div class="field">
+            <label for="firstname">Firstname</label>
           <input
             pInputText
             id="firstname"
             placeholder="Enter Application Name"
+            class="w-full"
           />
+          </div>
         </div>
         <div class="md:col-12">
-          <label id="icon">Icon</label>
-          <input
-            pInputText
-            aria-labelledby="icon"
-            placeholder="Example: pi pi-home"
-          />
+          <div class="field">
+            <label id="icon">Icon</label>
+            <input
+              pInputText
+              aria-labelledby="icon"
+              placeholder="Example: pi pi-home"
+              class="w-full"
+            />
+          </div>
         </div>
         <div class="md:col-12">
-          <label id="desc">Application Description</label>
-          <textarea
-            rows="5"
-            cols="30"
-            pInputTextarea
-            placeholder="Type Here"
-          ></textarea>
+          <div class="field">
+            <label id="desc">Application Description</label>
+            <textarea
+              rows="5"
+              cols="30"
+              pInputTextarea
+              placeholder="Type Here"
+              class="w-full"
+            >
+            </textarea>
+          </div>
         </div>
       </div>
      </ng-template>
      <ng-template pTemplate="footer">
-        <p-button label="Cancel" styleClass="p-button-outlined p-button-secondary"></p-button>
+        <p-button label="Cancel" styleClass="p-button-outlined p-button-secondary" (onClick)="isAddNewAppModalOpen = false"></p-button>
         <p-button label="Danger" styleClass="p-button-raised p-button-danger"></p-button>
         <p-button label="Next" styleClass="p-button-secondary"></p-button>
      </ng-template>
