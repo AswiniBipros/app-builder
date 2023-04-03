@@ -3,10 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { BuilderComponent } from './builder/builder.component';
+import { ApplicationListComponent } from './builder/application-list/application-list.component';
+import { WorkspaceComponent } from './builder/workspace/workspace.component';
+import { DesignerComponent } from './builder/designer/designer.component';
+import { AddApplicationComponent } from './builder/application-list/add-application/add-application.component';
+import { ManageMenuComponent } from './builder/application-list/manage-menu/manage-menu.component';
+import { MenuListComponent } from './builder/application-list/manage-menu/menu-list/menu-list.component';
+import { MenuHeaderComponent } from './builder/application-list/manage-menu/menu-header/menu-header.component';
+import { AddMenuComponent } from './builder/application-list/manage-menu/add-menu/add-menu.component';
+import { ApplicationComponent } from './builder/application-list/application/application.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    BuilderComponent,
+    ApplicationListComponent,
+    WorkspaceComponent,
+    DesignerComponent,
+    AddApplicationComponent,
+    ManageMenuComponent,
+    MenuListComponent,
+    MenuHeaderComponent,
+    AddMenuComponent,
+    ApplicationComponent
   ],
   imports: [
     BrowserModule,
