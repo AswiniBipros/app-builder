@@ -34,3 +34,8 @@
 label {
   font-weight: 500;
 }
+
+app-manage-menu p-dialog .p-dialog .p-dialog-content {
+  padding: unset !important;
+  height: 90vh !important;
+}
