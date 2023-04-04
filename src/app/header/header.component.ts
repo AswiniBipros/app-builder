@@ -14,15 +14,15 @@ export class HeaderComponent implements OnInit {
     this.items = [
       {
           label: 'Workspace',
-          routerLink:'workspace'
+          routerLink:'app-builder/workspace'
       },
       {
           label: 'App Builder',
-          routerLink:'app-list'
+          routerLink:'app-builder/app-list'
       },
       {
           label: 'Designer',
-          routerLink:'designer'
+          routerLink:'app-builder/designer'
       }
   ];
   }

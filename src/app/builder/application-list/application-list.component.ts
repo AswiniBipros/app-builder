@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApplicationModel } from 'src/app/application-model/application-model';
 import { AddApplicationComponent } from './add-application/add-application.component';
 import colors from 'src/app/application-model/color-constant-model';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-application-list',
@@ -23,7 +24,7 @@ export class ApplicationListComponent implements OnInit {
   }
 
   getApplicationList() {
-    this.http.get('assets/json/application-list.json')
+    this.http.get(environment.APP_BUILDER_ASSET_URL+'/json/application-list.json')
       .subscribe((res) => {
         this.appModels = res as ApplicationModel[];
       })

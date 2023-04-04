@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  APP_BUILDER_ASSET_URL:'http://localhost:7598/assets',
+  APP_BUILDER_SERVICE_URL:'http://localhost:7598/app-builder'
 };
 
 /*

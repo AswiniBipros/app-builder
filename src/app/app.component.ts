@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import 'primeicons/primeicons.css';
 
 @Component({
   selector: 'app-root',
