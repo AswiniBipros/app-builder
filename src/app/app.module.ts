@@ -18,6 +18,7 @@ import { ManageMenuComponent } from './builder/application-list/add-application/
 import { MenuListComponent } from './builder/application-list/add-application/manage-menu/menu-list/menu-list.component';
 import { MenuHeaderComponent } from './builder/application-list/add-application/manage-menu/menu-header/menu-header.component';
 import { AddMenuComponent } from './builder/application-list/add-application/manage-menu/add-menu/add-menu.component';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { AddMenuComponent } from './builder/application-list/add-application/man
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
